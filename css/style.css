@@ -5,7 +5,6 @@ body {
 .container_1000 {
   max-width: 1000px;
   margin: 0 auto;
-  height: 15vh;
 }
 
 .header_top {
@@ -46,7 +45,7 @@ li > a {
 .jumbo {
   position: relative;
   margin-top: 15vh;
-  width: 100%;
+  min-width: 200px;
   height: 70vh;
   background-image: url("../img/hero-bg.jpg");
   background-size: cover;
@@ -59,6 +58,7 @@ li > a {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  min-width: 600px;
 }
 
 .title {
@@ -81,6 +81,7 @@ li > a {
   background-color: #fafafa;
   width: 90%;
   margin: 50px auto;
+  padding: 30px;
 }
 
 .text > a {
@@ -96,14 +97,44 @@ li > a {
   display: none;
 }
 
+/* SECONDA SEZIONE */
+
+.container-fluid {
+  height: 80vh;
+}
+
+.container.old {
+  padding-top: 35vh;
+}
+
+
+.old_man {
+  background-image: url("../img/HelbizBanner.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+
+.iphone > img{
+  width: 30vh;
+  display: block;
+  margin: 0 auto;
+}
+
+.phone_text {
+  padding-top: 30vh;
+  width: 60%;
+}
+
+.phone_text.left {
+  margin-left: 50%;
+}
 /* MOBILE */
 @media screen and (max-width: 768px) {
-  .nav.md_display_none {
+  .nav.md_display_none,
+  .phone_text.xs_display_none {
     display: none;
-  }
-
-  .jumbo {
-    width: 100%;
   }
 
   i.md_display_block {
@@ -117,15 +148,21 @@ li > a {
     padding-left: 30px;
   }
 
-  .center {
-    width: 100%;
+  .title {
+    font-size: 20px;
+    min-width: 200px;
+  }
+
+  .container.old {
+    padding-top: 10vh;
   }
 
 }
 
 /* TABLET */
 @media screen and (max-width: 992px) and (min-width: 768px) {
-  .nav.md_display_none {
+  .nav.md_display_none,
+  .phone_text.md_display_none {
     display: none;
   }
 
@@ -141,7 +178,11 @@ li > a {
   }
 
   .center {
-    min-width: 700px;
+    min-width: 600px;
+  }
+
+  .container.old {
+    padding-top: 15vh;
   }
 
 }
