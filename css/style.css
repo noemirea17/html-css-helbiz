@@ -18,6 +18,10 @@ body {
   background-color: white;
 }
 /* NAV */
+.lg_display_none {
+  display: none;
+}
+
 nav {
   text-align: right;
 }
@@ -58,7 +62,6 @@ li > a {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  min-width: 600px;
 }
 
 .title {
@@ -86,15 +89,20 @@ li > a {
 
 .text > a {
   text-decoration: none;
+  color: black;
+}
+
+.text p {
+  padding: 10px;
 }
 
 
-.product > img {
+.product_img {
   height: 350px;
 }
 
-.lg_display_none {
-  display: none;
+.product_title {
+  width: 50%;
 }
 
 /* SECONDA SEZIONE */
@@ -104,43 +112,83 @@ li > a {
 }
 
 .container.old {
-  padding-top: 35vh;
+  padding-top: 20vh;
 }
 
 
 .old_man {
   background-image: url("../img/HelbizBanner.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  height: 50vh;
 }
 
 
 .iphone > img{
-  width: 30vh;
+  width: 80%;
   display: block;
   margin: 0 auto;
 }
 
 .phone_text {
-  padding-top: 30vh;
+  padding-top: 50vh;
   width: 60%;
 }
 
 .phone_text.left {
   margin-left: 50%;
 }
-/* MOBILE */
-@media screen and (max-width: 768px) {
-  .nav.md_display_none,
-  .phone_text.xs_display_none {
+
+/* TABLET */
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .md_display_none {
     display: none;
   }
 
-  i.md_display_block {
+  .md_display_block {
     display: block;
+  }
+
+  i {
     text-align: right;
-    padding: 30px 40px;
+    padding: 40px 40px;
+    font-size: 2em;
+  }
+
+  .logo {
+    padding-left: 30px;
+  }
+
+  .center {
+    width: 100%;
+  }
+
+  .container.old {
+    padding-top: 15vh;
+  }
+
+  .iphone > img{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+  .md_display_none,
+  .xs_display_none {
+    display: none;
+  }
+
+  .xs_display_block {
+    display: block;
+  }
+
+  i {
+    text-align: right;
+    padding: 40px 40px;
     font-size: 2em;
   }
 
@@ -150,39 +198,14 @@ li > a {
 
   .title {
     font-size: 20px;
-    min-width: 200px;
+  }
+
+  .center {
+    width: 100%;
   }
 
   .container.old {
     padding-top: 10vh;
-  }
-
-}
-
-/* TABLET */
-@media screen and (max-width: 992px) and (min-width: 768px) {
-  .nav.md_display_none,
-  .phone_text.md_display_none {
-    display: none;
-  }
-
-  i.md_display_block {
-    display: block;
-    text-align: right;
-    padding: 30px 40px;
-    font-size: 2em;
-  }
-
-  .logo {
-    padding-left: 30px;
-  }
-
-  .center {
-    min-width: 600px;
-  }
-
-  .container.old {
-    padding-top: 15vh;
   }
 
 }
